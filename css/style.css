@@ -1,0 +1,74 @@
+:root {
+    --cpadrao: rgb(190, 190, 190);
+    --ccontainer: rgb(50, 100, 200);
+    --cpub: rgb(50, 200, 100);
+    --ccont: rgb(225, 100, 50);
+    --fpadrao: Arial, Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body, button, input, select, textarea {
+    font-family: var(--fpadrao);
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: var(--cpadrao);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.container {
+    max-width: 800px;
+    height: 90vh;
+    background: var(--ccontainer);
+    display: grid;
+    grid-template-columns: 150px auto auto 150px;
+    grid-template-rows: 50px auto 50px;
+    grid-template-areas: 
+    "header nav nav nav"
+    "aside-1 main main aside-2"
+    "footer footer footer footer"
+    ;
+}
+
+.header {
+    grid-area: header;
+}
+
+.nav {
+    grid-area: nav;
+}
+
+.aside-1 {
+    grid-area: aside-1;
+    background: var(--cpub);
+    min-height: 400px;
+}
+
+.main {
+    width: 500px;
+    min-height: 400px;
+    grid-area: main;
+    background: var(--ccont);
+}
+.aside-2 {
+    grid-area: aside-2;
+    background: var(--cpub);
+    min-height: 400px;
+}
+
+.footer {
+    grid-area: footer;
+    width: 100%;
+    height: 100%;
+}
