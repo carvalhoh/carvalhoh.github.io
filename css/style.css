@@ -1,8 +1,8 @@
 :root {
-    --cpadrao: rgb(190, 190, 190);
+    --cpadrao: rgb(36, 228, 94);
     --ccontainer: rgb(50, 100, 200);
-    --cpub: rgb(50, 200, 100);
-    --ccont: rgb(225, 100, 50);
+    --cpub: rgba(0, 0, 0, 0.829);
+    --ccont: white;
     --fpadrao: Arial, Helvetica, sans-serif;
 }
 
@@ -29,7 +29,7 @@ body {
 
 div.container {
     max-width: 800px;
-    height: 90vh;
+    height: 95vh;
     background: var(--ccontainer);
     display: grid;
     grid-template-columns: 150px auto auto 150px;
@@ -39,6 +39,8 @@ div.container {
     "aside-1 main main aside-2"
     "footer footer footer footer"
     ;
+    border-radius: 15px;
+    box-shadow: 1px 2px 1px 1px rgba(109, 109, 109, 0.267);
 }
 
 .header {
